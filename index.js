@@ -24,7 +24,7 @@ module.exports = (api, options) => {
      */
     const gitInfo = () => {
       try {
-        return gitDescribeSync.apply(this, gitDescribeOps);
+        return gitDescribeSync(gitDescribeOps);
       } catch (err) {
         console.error('Failed to retrieve git info:', err);
       }
